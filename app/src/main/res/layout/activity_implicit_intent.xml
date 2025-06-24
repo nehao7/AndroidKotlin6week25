@@ -6,50 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LinaerLayoutScreen">
+    tools:context=".ImplicitIntentActivity">
 
     <TextView
+        android:id="@+id/tvData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name"
-        android:gravity="center"
-        android:textSize="40sp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your name"
-        android:gravity="start"
-        android:inputType="text"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Contact"
-        android:textSize="40sp"
-        />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your contact"
-        android:gravity="center"
-        android:inputType="phone"/>
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:text="Data"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click here"
-        android:textSize="30sp"
-        android:textColor="#48D4DC"
-        android:layout_gravity="center"
-       />
-
-    <ImageView
+        android:id="@+id/btnUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/_028615"/>
+        android:text="Open Url"
+        />
+ <Button
+     android:id="@+id/btnCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        />
+ <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+ <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        />
+
 </LinearLayout>

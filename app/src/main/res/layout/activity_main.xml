@@ -48,7 +48,20 @@
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableTop="@drawable/wifi_calling"
         android:textSize="20sp"
         android:text="Next Screen"/>
+    <Button
+        android:id="@+id/btnImplicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Implicit Screen"/>
+    <Button
+        android:id="@+id/btnConstraintScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Constraint and Data Passing"/>
 
 </LinearLayout>

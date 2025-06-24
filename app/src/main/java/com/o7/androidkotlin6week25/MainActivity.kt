@@ -27,6 +27,18 @@ class MainActivity : AppCompatActivity() {
             var intent=Intent(this,LinaerLayoutScreen::class.java)
             startActivity(intent)
         }
+        findViewById<Button>(R.id.btnImplicit).setOnClickListener {
+           var intent=Intent(this, ImplicitIntentActivity::class.java)
+               .putExtra("data","My data")
+           startActivity(intent)
+        }
+         findViewById<Button>(R.id.btnImplicit).setOnClickListener {
+           var intent=Intent(this, ConstraintActivity::class.java)
+               .putExtra("data","My data")
+           startActivity(intent)
+        }
+
+
 
     }
 }
