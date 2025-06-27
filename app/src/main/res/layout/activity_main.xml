@@ -17,11 +17,11 @@
         android:textSize="30sp"
        />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edtData"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:hint="Pass Data Value"
        />
 
     <TextView
@@ -63,5 +63,23 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:text="Constraint and Data Passing"/>
+ <Button
+        android:id="@+id/btnValidation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Validations Activity"/>
+ <Button
+        android:id="@+id/btnSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Spinner Activity"/>
+    <Button
+        android:id="@+id/btnNavController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Spinner Activity"/>
 
 </LinearLayout>

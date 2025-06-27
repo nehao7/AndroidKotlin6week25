@@ -3,11 +3,13 @@ package com.o7.androidkotlin6week25
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.o7.androidkotlin6week25.fragments_nav_controller.NavControllerActivity
 
 class MainActivity : AppCompatActivity() {
     var btn: Button?=null
@@ -28,12 +30,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         findViewById<Button>(R.id.btnImplicit).setOnClickListener {
+            var value=findViewById<EditText>(R.id.edtData).text.toString()
            var intent=Intent(this, ImplicitIntentActivity::class.java)
+               .putExtra("data",value)
+           startActivity(intent)
+        }
+         findViewById<Button>(R.id.btnConstraintScreen).setOnClickListener {
+           var intent=Intent(this, ConstraintActivity::class.java)
                .putExtra("data","My data")
            startActivity(intent)
         }
-         findViewById<Button>(R.id.btnImplicit).setOnClickListener {
-           var intent=Intent(this, ConstraintActivity::class.java)
+        findViewById<Button>(R.id.btnSpinner).setOnClickListener {
+           var intent=Intent(this, SpinnerActivity::class.java)
+               .putExtra("data","My data")
+           startActivity(intent)
+        }
+        findViewById<Button>(R.id.btnValidation).setOnClickListener {
+           var intent=Intent(this, ValidationsActivity::class.java)
+               .putExtra("data","My data")
+           startActivity(intent)
+        }
+     findViewById<Button>(R.id.btnNavController).setOnClickListener {
+           var intent=Intent(this, NavControllerActivity::class.java)
                .putExtra("data","My data")
            startActivity(intent)
         }
