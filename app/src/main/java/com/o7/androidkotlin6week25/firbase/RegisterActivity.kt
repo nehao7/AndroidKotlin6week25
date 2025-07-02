@@ -55,11 +55,11 @@ class RegisterActivity : AppCompatActivity() {
                         }
                     }
                     .addOnSuccessListener {
-                        Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
 
                     }
                     .addOnFailureListener {
-                        Toast.makeText(this, "Failed to Register", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "Failed to Register", Toast.LENGTH_SHORT).show()
 
                     }
             }

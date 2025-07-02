@@ -38,8 +38,8 @@ class RecyclerAdapter(var list :ArrayList<NotesEntity>
     override fun getItemCount(): Int {
         return  list.size
     }
-    interface OnClick{
-        fun update(position: Int)
-        fun delete(position: Int)
-    }
+//    interface OnClick{
+//        fun update(position: Int)
+//        fun delete(position: Int)
+//    }
 }
