@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.o7.androidkotlin6week25.firbase.RegisterActivity
 import com.o7.androidkotlin6week25.fragments_nav_controller.NavControllerActivity
+import com.o7.androidkotlin6week25.recyclerpackage.RecyclerActivity
 
 class MainActivity : AppCompatActivity() {
     var btn: Button?=null
@@ -59,6 +60,12 @@ class MainActivity : AppCompatActivity() {
 
     findViewById<Button>(R.id.btnRegisterScreen).setOnClickListener {
            var intent=Intent(this, RegisterActivity::class.java)
+               .putExtra("data","My data")
+           startActivity(intent)
+        }
+
+findViewById<Button>(R.id.btnRecyclerActivity).setOnClickListener {
+           var intent=Intent(this, RecyclerActivity::class.java)
                .putExtra("data","My data")
            startActivity(intent)
         }
