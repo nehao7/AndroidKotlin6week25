@@ -9,9 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.o7.androidkotlin6week25.R
 
 class RecyclerAdapter(var list :ArrayList<NotesEntity>
-//,var clickInterface: OnClick
-)
-    :RecyclerView.Adapter<RecyclerAdapter.Viewholder>(){
+,var clickInterface: OnClickInterface
+) :RecyclerView.Adapter<RecyclerAdapter.Viewholder>(){
     class Viewholder (var view: View):RecyclerView.ViewHolder(view){
         var name=view.findViewById<TextView>(R.id.tvStuName)
         var update=view.findViewById<Button>(R.id.btnUpdate)
@@ -28,18 +27,26 @@ class RecyclerAdapter(var list :ArrayList<NotesEntity>
         holder.apply {
             name.setText(list[position].title)
             update.setOnClickListener{
-//                clickInterface.update(position)
+                clickInterface.update(position)
             }
             delete.setOnClickListener{
-//                clickInterface.delete(position)
+                clickInterface.delete(position)
+            }
+
+            view.setOnClickListener{
+                clickInterface.onItemClick(position)
             }
 }    }
 
     override fun getItemCount(): Int {
         return  list.size
     }
-//    interface OnClick{
-//        fun update(position: Int)
-//        fun delete(position: Int)
-//    }
+    interface OnClickInterface{
+
+        fun update(position: Int)
+        fun delete(position: Int)
+
+        fun onItemClick(position: Int)
+
+    }
 }
