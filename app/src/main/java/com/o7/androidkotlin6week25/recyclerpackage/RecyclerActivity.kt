@@ -54,7 +54,7 @@ class RecyclerActivity : AppCompatActivity(), RecyclerAdapter.OnClickInterface {
             var btnCancel = dialog.findViewById<Button>(R.id.btnCancel)
 
             btnCancel.setOnClickListener{
-                
+
                 Noteslist.add(NotesEntity(title = mytext.text.toString()))
                 Toast.makeText(this@RecyclerActivity, "${mytext.text}", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()

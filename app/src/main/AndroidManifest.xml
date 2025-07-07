@@ -18,6 +18,9 @@
             android:name=".recyclerpackage.NavigateActivity"
             android:exported="false" />
         <activity
+            android:name=".firbase.FirestoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".recyclerpackage.RecyclerActivity"
             android:exported="false" />
         <activity
