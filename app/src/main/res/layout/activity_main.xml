@@ -84,7 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="Spinner Activity"/>
+        android:text="NavController Activity"/>
     <Button
         android:id="@+id/btnRegisterScreen"
         android:layout_width="match_parent"
@@ -97,5 +97,17 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:text="Recycler Screen"/>
+    <Button
+        android:id="@+id/btnFirestoreActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Firestore Activity"/>
+    <Button
+        android:id="@+id/btnBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="BottomNav Activity"/>
 </LinearLayout>
 </ScrollView>

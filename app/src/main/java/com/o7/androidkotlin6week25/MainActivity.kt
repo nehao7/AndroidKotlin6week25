@@ -9,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.o7.androidkotlin6week25.BottomNav.BottomNavActivity
+import com.o7.androidkotlin6week25.firbase.FirestoreActivity
 import com.o7.androidkotlin6week25.firbase.RegisterActivity
 import com.o7.androidkotlin6week25.fragments_nav_controller.NavControllerActivity
 import com.o7.androidkotlin6week25.recyclerpackage.RecyclerActivity
@@ -54,20 +56,27 @@ class MainActivity : AppCompatActivity() {
         }
      findViewById<Button>(R.id.btnNavController).setOnClickListener {
            var intent=Intent(this, NavControllerActivity::class.java)
-               .putExtra("data","My data")
-           startActivity(intent)
+
+         startActivity(intent)
         }
 
     findViewById<Button>(R.id.btnRegisterScreen).setOnClickListener {
            var intent=Intent(this, RegisterActivity::class.java)
-               .putExtra("data","My data")
-           startActivity(intent)
+
+        startActivity(intent)
         }
 
-findViewById<Button>(R.id.btnRecyclerActivity).setOnClickListener {
+        findViewById<Button>(R.id.btnRecyclerActivity).setOnClickListener {
            var intent=Intent(this, RecyclerActivity::class.java)
-               .putExtra("data","My data")
-           startActivity(intent)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.btnFirestoreActivity).setOnClickListener {
+           var intent=Intent(this, FirestoreActivity::class.java)
+            startActivity(intent)
+        }
+ findViewById<Button>(R.id.btnBottomNav).setOnClickListener {
+           var intent=Intent(this, BottomNavActivity::class.java)
+            startActivity(intent)
         }
 
 
