@@ -1,5 +1,6 @@
 package com.o7.androidkotlin6week25.recyclerpackage
 
+import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
@@ -67,8 +68,22 @@ class RecyclerActivity : AppCompatActivity(), RecyclerAdapter.OnClickInterface {
     }
 
     override fun delete(position: Int) {
-        Noteslist.removeAt(position)
-        Toast.makeText(this, "Update Clicked", Toast.LENGTH_SHORT).show()
+            var alertDialog=AlertDialog.Builder(this)
+                .apply {
+                setTitle("Delete")
+               setMessage("Are you sure you want to delete this item?")
+                setPositiveButton("yes") { _, _ ->
+                    Noteslist.removeAt(position)
+                    Toast.makeText(this@RecyclerActivity,
+                        "Update Clicked", Toast.LENGTH_SHORT).show()
+                }
+                    setPositiveButton("yuhi"){_,_->}
+                setNegativeButton("No") { _, _ ->
+                }
+                setNeutralButton("Cancel"){_,_->}
+                setCancelable(true)
+                show()
+            }
 
     }
 

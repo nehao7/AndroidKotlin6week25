@@ -6,7 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.firestore
 import com.o7.androidkotlin6week25.R
 import com.o7.androidkotlin6week25.databinding.ActivityRegisterBinding
 
@@ -14,6 +16,7 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var binding: ActivityRegisterBinding
     private var auth: FirebaseAuth = FirebaseAuth.getInstance()
     private val TAG = "LoginActivity"
+    var db=Firebase.firestore
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -55,6 +58,17 @@ class RegisterActivity : AppCompatActivity() {
                         }
                     }
                     .addOnSuccessListener {
+                        db.collection("Users").add(
+                            RegisterModel(email = "${binding.edtemail.text}",
+                                type = 0
+                            )
+                        ).addOnSuccessListener {
+                            Toast.makeText(this, "Registration Data added", Toast.LENGTH_SHORT).show()
+
+                        }
+                            .addOnFailureListener {
+
+                            }
                         Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
 
                     }

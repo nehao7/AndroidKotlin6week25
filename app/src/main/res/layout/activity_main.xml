@@ -92,6 +92,12 @@
         android:textSize="20sp"
         android:text="Register Screen"/>
     <Button
+        android:id="@+id/btnLoginScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Login Screen"/>
+    <Button
         android:id="@+id/btnRecyclerActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
