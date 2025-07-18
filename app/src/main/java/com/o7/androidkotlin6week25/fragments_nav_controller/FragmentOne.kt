@@ -43,7 +43,9 @@ class FragmentOne : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.btnNextFrg).setOnClickListener {
-            findNavController().navigate(R.id.fragmentTwo2)
+            var bundle=Bundle()
+            bundle.putString("data", "My Data")
+            findNavController().navigate(R.id.fragmentTwo2,bundle)
         }
     }
 
