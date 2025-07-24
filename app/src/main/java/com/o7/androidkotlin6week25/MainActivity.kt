@@ -9,7 +9,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
 import com.o7.androidkotlin6week25.BottomNav.BottomNavActivity
+import com.o7.androidkotlin6week25.databinding.ActivityMainBinding
 import com.o7.androidkotlin6week25.firbase.FirestoreActivity
 import com.o7.androidkotlin6week25.firbase.LoginActivity
 import com.o7.androidkotlin6week25.firbase.RegisterActivity
@@ -17,11 +19,13 @@ import com.o7.androidkotlin6week25.fragments_nav_controller.NavControllerActivit
 import com.o7.androidkotlin6week25.recyclerpackage.RecyclerActivity
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding:ActivityMainBinding
     var btn: Button?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding=ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -29,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn=findViewById(R.id.btnNext)
 
+        Glide.with(this)
+            .load("https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg")
+            .into(binding.glideImgView);
         btn?.setOnClickListener {
             Toast.makeText(this,"On Click Message displayed",Toast.LENGTH_SHORT).show()
             var intent=Intent(this,LinaerLayoutScreen::class.java)

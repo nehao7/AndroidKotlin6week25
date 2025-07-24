@@ -58,4 +58,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+//    implementation(libs.androidx.benchmark.macro)
+//    implementation(libs.my.library)
+
+    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.17")
+    implementation ("com.github.bumptech.glide:glide:4.8.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.8.0")
+
 }
