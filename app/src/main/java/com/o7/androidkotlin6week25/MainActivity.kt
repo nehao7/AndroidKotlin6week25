@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
+
 import com.o7.androidkotlin6week25.BottomNav.BottomNavActivity
 import com.o7.androidkotlin6week25.databinding.ActivityMainBinding
 import com.o7.androidkotlin6week25.firbase.FirestoreActivity
